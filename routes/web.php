@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +12,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
+
 Route::get('/pizzas', function () {
-    // get data from a database
-    $pizza = [
-      'type' => 'hawaiian', 
-      'base' => 'cheesy crust',
-      'price' => 10
-    ];
-    return view('pizzas', $pizza);
-  });
+  // get data from a database
+  $pizzas = [
+    ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+    ['type' => 'volcano', 'base' => 'garlic crust'],
+    ['type' => 'veg supreme', 'base' => 'thin & crispy']
+  ];
+  return view('pizzas', ['pizzas' => $pizzas]);
+});
