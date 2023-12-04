@@ -6,14 +6,6 @@
         <div class="title m-b-md">
             Pizza List
         </div>
-        
-        <!-- @for($i = 0; $i < 5; $i++)
-          <p>the value of i is {{ $i }}</p>
-        @endfor -->
-
-        <!-- @for($i = 0; $i < count($pizzas); $i++)
-          <p>{{ $pizzas[$i]['type'] }}</p>
-        @endfor -->
 
         @foreach($pizzas as $pizza)
           <div>

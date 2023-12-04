@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +16,6 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/pizzas/{id}', function ($id) {
-  // get data from a database
-  
-
-  return view('details', ['id' => $id]);
-});
+// pizza routes
+Route::get('/pizzas', [PizzaController::class, 'index']);
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
