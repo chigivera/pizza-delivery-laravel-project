@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>PizzaHouse</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -15,16 +15,16 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('build/assets/app-041e359a.css') }}">
-<script src="{{ asset('build/assets/_variables-4ed993c7.css') }}"></script>
-<script src="{{ asset('build/assets/app-3997ea6b.js') }}" defer></script>
+<link href="{{asset('build/assets/main-72b00a27.css')}}" rel='stylesheet'>
+
     </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+PizzaHouse
+            </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
