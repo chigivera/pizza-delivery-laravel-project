@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('type');
             $table->string('base');
             $table->string('name');
+            $table->json('toppings');
+
         });
     }
 
